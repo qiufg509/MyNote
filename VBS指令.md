@@ -2,7 +2,7 @@
 
 1. **SendKeys** [String]：模拟按按键
 
-   ```
+   ```vbscript
    '切换输入法（模拟同时按下：Shift 空格）
    Dim ws
    Set ws = CreateObject("WScript.Shell")
@@ -12,7 +12,7 @@
 
 2. **do ... loop**：循环
 
-   ```
+   ```vbscript
    Dim Count:Count = 5 '定义一个变量
    Do Until Count = 0 '直到Count变量为0时，否则一直循环
        MsgBox Count
@@ -20,7 +20,7 @@
    Loop
    ```
 
-   ```
+   ```vbscript
    Dim Count:Count = 5 '定义一个变量
    Do While Count <> 0 '当Count变量为0时，停止循环
        MsgBox Count
@@ -31,7 +31,7 @@
 
 3. **Run**：运行程序
 
-   ```
+   ```vbscript
    '打开记事本
    Set WshShell=WScript.CreateObject("WScript.Shell") 
    WshShell.Run "notepad"
@@ -39,7 +39,7 @@
 
 4. **AppActivate**：激活窗口
 
-   ```
+   ```vbscript
    set s = WScript.CreateObject("WScript.Shell")
    app=s.Run ("D:\Progra~1\Tencent\QQ\QQ.exe") '你QQ的路径！'注意Program Files要写成Progra~1
    WScript.Sleep 1000
@@ -48,14 +48,14 @@
 
 5. **Sleep**：等待指定时间（不用创建对象）
 
-   ```
+   ```vbscript
    '休眠4秒
    WScript.Sleep 4000
    ```
 
 6. **vbhide**：隐藏当前窗口
 
-   ```
+   ```vbscript
    '隐藏执行C:\test.bat
    Set ws = CreateObject("Wscript.Shell") 
    ws.run "cmd /c C:\test.bat",vbhide
@@ -67,7 +67,7 @@
 
    #### 自动登录邮箱
 
-   ```
+   ```vbscript
    set s = WScript.CreateObject("WScript.Shell") '创建WScript.Shell对象
    app=s.Run ("chrome") '打开chrome浏览器
    WScript.Sleep 1000
