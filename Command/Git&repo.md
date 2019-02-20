@@ -48,9 +48,34 @@
 
 # Git使用中的一些方法总结
 
-1、git add 对应的撤销方法git rm --cached
+##### 1、编辑但还没add进缓存区的撤销
 
-2、关联本地仓库的两种方式
+```
+git checkout README.md
+```
+
+##### 2、git add 对应的撤销方法
+
+```
+git rm --cached
+```
+
+##### 3、git commit 对应的撤销方法
+
+```
+#--hard删除本地修改内容彻底回到上一个版本，不带任何参数则回退到上一个版本同时保留更改的数据
+#HEAD^ 表示上一个不版本，可替换为具体的版本哈希码使数据回滚到该版本上
+git reset [--hard] HEAD^
+```
+
+##### 4、恢复到以及被删除了的版本
+
+```
+git reflog #可以查看所有分支的所有操作记录（包括已经被删除的 commit 记录和 reset 的操作）
+git reset --hard 被删除的版本的哈希码
+```
+
+##### 5、关联本地仓库的两种方式
 
 ```
 #有远程仓库直接clone到本地
@@ -73,3 +98,70 @@ git push origin master
 git push -u origin master -f
 ```
 
+##### 6、Git日志
+
+1、格式化日志，使用自定义指令git lg
+
+```
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+```
+
+2、常用的git log参数
+
+```
+--author="xxx" #按用户xxx过滤的日志
+--grep="xxx" #按commit描述过滤日志
+./Android/常用快捷键.md #按文件过滤日志
+--pretty=oneline #一行显示，只显示哈希值和提交说明
+--pretty=format:"" #控制显示的记录格式
+```
+
+##### 7、Git查看差异
+
+```
+git diff <$id1> <$id2> # 比较两次提交之间的差异
+git diff <branch1>..<branch2> # 在两个分支之间比较
+git diff --staged # 比较暂存区和版本库差异
+```
+
+##### 8、将数据存入缓存区，做其他操作（切换分支修改BUG等），再还原
+
+```
+git stash
+做其他操作...切换回原来分支
+git stash pop
+```
+
+##### 9、分支的常用操作
+
+```
+#创建并切换分支，相当于执行创建分支git branch develop 和git checkout develop
+git checkout -b develop
+#删除本地分支
+git branch -d develop
+git branch -D develop (强制删除)
+#删除远程分支
+git push origin :develop
+```
+
+
+
+# repo
+
+##### 下载repo并克隆manifest
+
+```
+repo init -u git@192.168.0.105:AndroidApp/HampooHome/manifest.git -m sk11.xml --repo-url=git@192.168.0.105:AndroidApp/HampooHome/repo.git --no-repo-verify --repo-branch=master
+```
+
+##### repo sync //下载代码
+
+##### repo branches //查看分支
+
+##### repo start developer --all //创建并切换分支
+
+##### repo abandon developer //删除分支
+
+##### repo checkout //切换分支
+
+##### repo forall -c git pull origin developer
