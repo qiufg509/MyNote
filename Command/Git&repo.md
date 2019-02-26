@@ -137,11 +137,20 @@ git stash pop
 ```
 #创建并切换分支，相当于执行创建分支git branch develop 和git checkout develop
 git checkout -b develop
+#本地没有远程有，创建并切换到远程指定的分支
+git checkout --track origin/develop
 #删除本地分支
 git branch -d develop
 git branch -D develop (强制删除)
 #删除远程分支
 git push origin :develop
+```
+
+##### 10、修改最近commit的message（还没有push到远程服务器）
+
+```
+git commit --amend
+#按i修改message，输输入“:wq”回车完成修改
 ```
 
 
@@ -154,14 +163,39 @@ git push origin :develop
 repo init -u git@192.168.0.105:AndroidApp/HampooHome/manifest.git -m sk11.xml --repo-url=git@192.168.0.105:AndroidApp/HampooHome/repo.git --no-repo-verify --repo-branch=master
 ```
 
-##### repo sync //下载代码
+##### 下载代码
 
-##### repo branches //查看分支
+```
+repo sync 
+```
 
-##### repo start developer --all //创建并切换分支
+##### 查看分支
 
-##### repo abandon developer //删除分支
+```
+repo branches
+```
 
-##### repo checkout //切换分支
+##### 创建并切换分支
 
-##### repo forall -c git pull origin developer
+```
+repo start developer --all
+```
+
+##### 删除分支
+
+```
+repo abandon developer
+```
+
+##### 切换分支
+
+```
+repo checkout
+```
+
+##### 遍历执行所有仓库的git指令
+
+```
+repo forall -c git pull origin developer
+```
+
