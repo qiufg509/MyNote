@@ -137,8 +137,8 @@ git stash pop
 ```
 #创建并切换分支，相当于执行创建分支git branch develop 和git checkout develop
 git checkout -b develop
-#本地没有远程有，创建并切换到远程指定的分支
-git checkout --track origin/develop
+#本地没有指定分支远程有，创建并切换到远程指定的分支
+git checkout -b develop origin/develop
 #删除本地分支
 git branch -d develop
 git branch -D develop (强制删除)
