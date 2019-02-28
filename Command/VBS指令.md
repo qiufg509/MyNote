@@ -89,45 +89,45 @@
 
 #### vbs基本和特殊按键
 
-|     按键     |        对应发送的键值         | 备注 |
-| :----------: | :---------------------------: | :--: |
-|    空格键    |              " "              |      |
-|    退格键    | {BACKSPACE} 或 {BS} 或 {BKSP} |      |
-|    BREAK     |            {BREAK}            |      |
-|    Delete    |   {Delete}     或     {DEL}   |      |
-|    向下键    |            {DOWN}             |      |
-|    向上键    |             {UP}              |      |
-|    向左键    |            {LEFT}             |      |
-|    向右键    |            {RIGHT}            |      |
-|     END      |             {END}             |      |
-|    ENTER     |     {ENTER}     或     ~      |      |
-|     ESC      |             {ESC}             |      |
-|     TAB      |             {TAB}             |      |
-|  CAPS LOCK   |          {CAPSLOCK}           |      |
-|     HELP     |            {HELP}             |      |
-|     HOME     |            {HOME}             |      |
-|    Insert    |   {Insert}     或     {INS}   |      |
-|   NUM LOCK   |           {NUMLOCK}           |      |
-|  PAGE DOWN   |            {PGDN}             |      |
-|   PAGE UP    |            {PGUP}             |      |
-| PRINT SCREEN |            {PRTSC}            |      |
-| SCROLL LOCK  |         {SCROLLLOCK}          |      |
-|      F1      |             {F1}              |      |
-|      F2      |             {F2}              |      |
-|      F3      |             {F3}              |      |
-|      F4      |             {F4}              |      |
-|      F5      |             {F5}              |      |
-|      F6      |             {F6}              |      |
-|      F7      |             {F7}              |      |
-|      F8      |             {F8}              |      |
-|      F9      |             {F9}              |      |
-|     F10      |             {F10}             |      |
-|     F11      |             {F11}             |      |
-|     F12      |             {F12}             |      |
-|    SHIFT     |               +               |      |
-|     CTRL     |               ^               |      |
-|     ALT      |               %               |      |
-|      +       |              {+}              |      |
-|      ^       |              {^}              |      |
-|      %       |             \{%\}             |      |
+|     按键     |        对应发送的键值         |       备注        |
+| :----------: | :---------------------------: | :---------------: |
+|    空格键    |              " "              |                   |
+|    退格键    | {BACKSPACE} 或 {BS} 或 {BKSP} |                   |
+|    BREAK     |            {BREAK}            |                   |
+|    Delete    |   {Delete}     或     {DEL}   |                   |
+|    向下键    |            {DOWN}             |                   |
+|    向上键    |             {UP}              |                   |
+|    向左键    |            {LEFT}             |                   |
+|    向右键    |            {RIGHT}            |                   |
+|     END      |             {END}             |                   |
+|    ENTER     |     {ENTER}     或     ~      |                   |
+|     ESC      |             {ESC}             |                   |
+|     TAB      |             {TAB}             |                   |
+|  CAPS LOCK   |          {CAPSLOCK}           |                   |
+|     HELP     |            {HELP}             |                   |
+|     HOME     |            {HOME}             |                   |
+|    Insert    |   {Insert}     或     {INS}   |                   |
+|   NUM LOCK   |           {NUMLOCK}           |                   |
+|  PAGE DOWN   |            {PGDN}             |                   |
+|   PAGE UP    |            {PGUP}             |                   |
+| PRINT SCREEN |            {PRTSC}            |                   |
+| SCROLL LOCK  |         {SCROLLLOCK}          |                   |
+|      F1      |             {F1}              |                   |
+|      F2      |             {F2}              |                   |
+|      F3      |             {F3}              |                   |
+|      F4      |             {F4}              |                   |
+|      F5      |             {F5}              |                   |
+|      F6      |             {F6}              |                   |
+|      F7      |             {F7}              |                   |
+|      F8      |             {F8}              |                   |
+|      F9      |             {F9}              |                   |
+|     F10      |             {F10}             |                   |
+|     F11      |             {F11}             |                   |
+|     F12      |             {F12}             |                   |
+|    SHIFT     |               +               |                   |
+|     CTRL     |               ^               |                   |
+|     ALT      |               %               |                   |
+|      +       |              {+}              |                   |
+|      ^       |              {^}              |                   |
+|      %       |             {%%}              | 大括号中只有一个% |
 
