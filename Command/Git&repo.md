@@ -153,7 +153,7 @@ git commit --amend
 #按i修改message，输输入“:wq”回车完成修改
 ```
 
-
+[工作中99%能用到的git命令](https://www.cxiansheng.cn/daily/490)
 
 # repo
 
