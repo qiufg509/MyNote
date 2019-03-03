@@ -116,6 +116,16 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 --pretty=format:"" #控制显示的记录格式
 ```
 
+3、日志乱码
+
+```
+git config --global i18n.commitencoding utf-8
+git config --global i18n.logoutputencoding utf-8
+系统环境变了设置 LESSCHARSET=utf-8
+```
+
+
+
 ##### 7、Git查看差异
 
 ```
