@@ -4,6 +4,10 @@
 
 # 二、Exception和Error有什么区别？
 
+Exception和Error都继承自Throwable，只有继承自Throwable类的异常才能throw和try...catch。
+
+Exception是正常情况下可以预测的异常，需要做
+
 
 
 # 三、谈谈final、finally、finalize有什么区别？
