@@ -163,6 +163,28 @@ git commit --amend
 #按i修改message，输输入“:wq”回车完成修改
 ```
 
+##### 11、标签操作
+
+```
+git tag 标签名 添加标签(默认对当前版本)
+
+git tag 标签名 commit_id 对某一提交记录打标签
+
+git tag -a 标签名 -m '描述' 创建新标签并增加备注
+
+git tag 列出所有标签列表
+
+git show 标签名 查看标签信息
+
+git tag -d 标签名 删除本地标签
+
+git push origin 标签名 推送标签到远程仓库
+
+git push origin --tags 推送所有标签到远程仓库
+
+git push origin :refs/tags/标签名 从远程仓库中删除标签
+```
+
 [工作中99%能用到的git命令](https://www.cxiansheng.cn/daily/490)
 
 # repo
