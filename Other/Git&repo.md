@@ -185,6 +185,22 @@ git push origin --tags 推送所有标签到远程仓库
 git push origin :refs/tags/标签名 从远程仓库中删除标签
 ```
 
+##### 12、统计个人代码量 
+
+```
+统计个人代码量：
+git log --author="fengguang.qiu" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+
+贡献值统计：
+git log --pretty='%aN' | sort -u | wc -l
+
+查看排名前 5 的贡献者：
+git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
+
+其他统计方法：
+使用 git_stats或者使用cloc
+```
+
 [工作中99%能用到的git命令](https://www.cxiansheng.cn/daily/490)
 
 # repo
