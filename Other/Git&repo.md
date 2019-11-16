@@ -205,13 +205,13 @@ git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
 
 # repo
 
-##### 下载repo并克隆manifest
+##### 下载 git 库列表 manifest.xml
 
 ```
 repo init -u git@192.168.0.105:AndroidApp/HampooHome/manifest.git -m sk11.xml --repo-url=git@192.168.0.105:AndroidApp/HampooHome/repo.git --no-repo-verify --repo-branch=master
 ```
 
-##### 下载代码
+##### 下载所有 git 库的更新(下载代码)
 
 ```
 repo sync 
