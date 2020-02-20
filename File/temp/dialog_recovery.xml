@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_loading_bg"
+    android:minHeight="@dimen/dialog_height_default"
+    android:minWidth="@dimen/dialog_width_default"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="113dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:lineSpacingExtra="22dp"
+        android:text="@string/recovery_tip"
+        android:textColor="@android:color/white"
+        android:textSize="42sp"
+        android:textStyle="normal" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@color/transparent"
+        android:divider="@drawable/shape_transparent_divider"
+        android:dividerPadding="10dp"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <com.hampoo.home.setting.widget.BlurMaskTextView
+            android:id="@+id/confirm"
+            android:layout_width="240dp"
+            android:layout_height="110dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="normal"
+            app:tv_bg_color="#F1563E"
+            app:tv_blur_width="@dimen/blur_mask_radius"
+            app:tv_mask_color="#99F1563E"
+            app:tv_select_type="true"
+            app:tv_un_focus_color="#524F4D" />
+
+        <com.hampoo.home.setting.widget.BlurMaskTextView
+            android:id="@+id/cancel"
+            android:layout_width="240dp"
+            android:layout_height="110dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="normal"
+            app:tv_bg_color="#F1563E"
+            app:tv_blur_width="@dimen/blur_mask_radius"
+            app:tv_mask_color="@color/blur_mask_focus_btn"
+            app:tv_select_type="true"
+            app:tv_un_focus_color="#524F4D">
+
+            <requestFocus />
+        </com.hampoo.home.setting.widget.BlurMaskTextView>
+
+    </LinearLayout>
+
+</LinearLayout>

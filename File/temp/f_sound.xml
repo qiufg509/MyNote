@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/FragmentStyle"
+              tools:context="com.hampoo.home.setting.ui.SoundFragment">
+
+    <com.hampoo.home.setting.widget.DescriptionLayout
+        android:layout_width="@dimen/dp_350"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        app:left_icon="@drawable/main_sound"
+        app:left_title="@string/display"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_layout_shrink_l_t_r"
+        android:orientation="vertical">
+
+        <com.hampoo.home.setting.widget.OuterGlowFrameLayout
+
+            android:id="@+id/ogf_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:stateListAnimator="@animator/anim_karaoke_btn">
+
+            <com.hampoo.home.setting.widget.SeekItem
+                android:id="@+id/voice_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sound_item_title_width="@dimen/sound_item_title_width"
+                app:sound_text="@string/display_voice_system">
+
+            </com.hampoo.home.setting.widget.SeekItem>
+
+            <requestFocus/>
+        </com.hampoo.home.setting.widget.OuterGlowFrameLayout>
+
+        <com.hampoo.home.setting.widget.OuterGlowFrameLayout
+
+            android:id="@+id/ogf_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:stateListAnimator="@animator/anim_karaoke_btn">
+
+            <com.hampoo.home.setting.widget.SeekItem
+                android:id="@+id/voice_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_system"
+                app:sound_item_title_width="@dimen/sound_item_title_width"
+                app:sound_text="@string/display_voice_media"/>
+        </com.hampoo.home.setting.widget.OuterGlowFrameLayout>
+
+        <com.hampoo.home.setting.widget.OuterGlowFrameLayout
+
+            android:id="@+id/ogf_mic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:stateListAnimator="@animator/anim_karaoke_btn">
+
+            <com.hampoo.home.setting.widget.SeekItem
+                android:id="@+id/voice_mic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_system"
+                app:sound_item_title_width="@dimen/sound_item_title_width"
+                app:sound_text="@string/display_voice_mic"/>
+        </com.hampoo.home.setting.widget.OuterGlowFrameLayout>
+
+        <com.hampoo.home.setting.widget.OuterGlowFrameLayout
+            android:id="@+id/ogf_silent_boot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:paddingEnd="140dp"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:stateListAnimator="@animator/anim_karaoke_btn">
+
+            <com.hampoo.home.setting.widget.TimeSwitchItem
+                android:id="@+id/silent_boot"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/selector_item_focus"
+                android:focusable="true"
+                app:switch_item_hide_divider="true"
+                app:switch_item_text="@string/display_silent_boot"
+                app:switch_text_width="@dimen/sound_item_title_width_silent_boot">
+            </com.hampoo.home.setting.widget.TimeSwitchItem>
+
+        </com.hampoo.home.setting.widget.OuterGlowFrameLayout>
+
+
+        <com.hampoo.home.setting.widget.OuterGlowFrameLayout
+
+            android:id="@+id/ogf_rest_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:stateListAnimator="@animator/anim_karaoke_btn">
+
+            <com.hampoo.home.setting.widget.MenuItem
+                android:id="@+id/rest_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/voice_media"
+                app:menu_item_arrow_margin_end="@dimen/menu_item_display_margin_end"
+                app:menu_item_arrow_margin_start="@dimen/menu_item_display_margin_start"
+                app:menu_item_hide_divider="true"
+                app:menu_item_text="@string/display_rest_reminder"
+                app:menu_text_width="@dimen/sound_item_title_width"/>
+
+        </com.hampoo.home.setting.widget.OuterGlowFrameLayout>
+
+        <com.hampoo.home.setting.widget.OuterGlowFrameLayout
+
+            android:id="@+id/ogf_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:stateListAnimator="@animator/anim_karaoke_btn">
+
+            <com.hampoo.home.setting.widget.MenuItem
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/voice_media"
+                app:menu_item_arrow_margin_end="@dimen/menu_item_display_margin_end"
+                app:menu_item_arrow_margin_start="@dimen/menu_item_display_margin_start"
+                app:menu_item_hide_divider="true"
+                app:menu_item_text="@string/display_resolution"
+                app:menu_text_width="@dimen/sound_item_title_width"/>
+
+        </com.hampoo.home.setting.widget.OuterGlowFrameLayout>
+
+        <com.hampoo.home.setting.widget.OuterGlowFrameLayout
+
+            android:id="@+id/ogf_screen_zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:stateListAnimator="@animator/anim_karaoke_btn">
+
+            <com.hampoo.home.setting.widget.MenuItem
+                android:id="@+id/screen_zoom"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/voice_media"
+                app:menu_item_arrow_margin_end="@dimen/menu_item_display_margin_end"
+                app:menu_item_arrow_margin_start="@dimen/menu_item_display_margin_start"
+                app:menu_item_hide_divider="true"
+                app:menu_item_text="@string/display_screen_zoom"
+                app:menu_text_width="@dimen/sound_item_title_width"/>
+
+        </com.hampoo.home.setting.widget.OuterGlowFrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
