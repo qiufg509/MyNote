@@ -154,6 +154,8 @@ git branch -d develop
 git branch -D develop (强制删除)
 #删除远程分支
 git push origin :develop
+#git更新远程分支
+gut remote update origin --prune
 ```
 
 ##### 10、修改最近commit的message（还没有push到远程服务器）

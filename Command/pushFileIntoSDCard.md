@@ -1,6 +1,8 @@
-```
+```bat
 @echo off
-set /p file="Please input your Rpk path:"
+adb get-state >nul
+adb wait-for-device
+set /p file="Please input your file path:"
 call :sub %file%
 goto end
 

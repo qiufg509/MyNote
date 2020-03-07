@@ -1,7 +1,9 @@
 前提APP为debugable模式
 
-```
+```bat
 @echo off
+adb get-state >nul
+adb wait-for-device
 set /p package="Please enter the package name:"
 set /p db="Please enter the DB name:"
 set cmdFile=%USERPROFILE%\Desktop\.com.sh

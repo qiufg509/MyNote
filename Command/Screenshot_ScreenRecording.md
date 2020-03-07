@@ -1,10 +1,12 @@
-```
+```bat
 @echo off
+adb get-state >nul
+adb wait-for-device
 :begin
 echo 1.Screenshot
 echo 2.Screen recording
 echo 3.Export screen recording file
-echo q.exit
+echo Q.exit
 choice /C 123q /M "Please select:"
 if %errorlevel%==1 goto one
 if %errorlevel%==2 goto two

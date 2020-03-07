@@ -1,7 +1,9 @@
-```
+```bat
 @echo off
 ::set window charset utf-8
 CHCP 65001 >nul
+adb get-state >nul
+adb wait-for-device
 FOR /F "tokens=3 delimes=/ " %%i IN ('adb shell dumpsys window ^| findstr mCurrentFocus') do call :sub %%i
 ::restult
 goto end

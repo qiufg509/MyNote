@@ -1,10 +1,10 @@
-```
+```bat
 @echo off
 ::Set the window's encoding format to UTF-8
 CHCP 65001 >nul
 :start
 call :tips
-choice /C abcdefghij /M "Please select:"
+choice /C abcdefghij /N /M "Please select:"
 if %errorlevel% == 1 call %CD%\outputApp.bat
 if %errorlevel% == 2 call %CD%\outputDB.bat
 if %errorlevel% == 3 call %CD%\uninstallCurrentApp.bat

@@ -1,6 +1,6 @@
 #### 读取MD5 、 SHA1、 SHA256的三种方式
 
-```
+```bat
 @echo off
 set /p intput="Please enter the file(jks,keystore,apk,rsa) path to query:"
 call :sub %intput%
