@@ -5,15 +5,15 @@ CHCP 936 >nul
 adb get-state >nul
 adb wait-for-device
 :begin
-echo 1.Screenshot
-echo 2.Screen recording
-echo 3.Export screen recording file
-echo Q.exit
-choice /C 123q /M "Please select:"
-if %errorlevel%==1 goto one
-if %errorlevel%==2 goto two
-if %errorlevel%==3 goto three
-if %errorlevel%==4 goto end
+echo A. Screenshot
+echo B. Screen recording
+echo C. Export screen recording file
+echo Q. exit
+choice /C ABCQ /N /M "Please select:"
+if %errorlevel% == 1 goto one
+if %errorlevel% == 2 goto two
+if %errorlevel% == 3 goto three
+if %errorlevel% == 4 goto end
 
 :one
 adb shell /system/bin/screencap -p /sdcard/screenshot.png
