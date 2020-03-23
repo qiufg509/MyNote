@@ -7,8 +7,8 @@ call :sub %file%
 goto end
 
 :sub
-adb push %1 sdcard/Downloads/
-adb shell am broadcast -a android.intent.action.media_scanner_scan_file -d file:///sdcard/Download/%~nx1
+adb push %1 sdcard/Download/
+adb shell am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file:///sdcard/Download/%~nx1
 goto :eof
 
 :end
