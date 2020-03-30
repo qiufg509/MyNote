@@ -6,7 +6,8 @@ adb get-state >nul
 adb wait-for-device
 set /p package="Please enter the package name:"
 set cmd=%USERPROFILE%\Desktop\.com.sh
-set desDir=/sdcard/%package%
+rem Android8.0权限变更,run-as只有访问当前应用目录的权限
+set desDir=/sdcard/Android/data/%package%/%package%
 echo rm -rf %desDir% >%cmd%
 echo mkdir %desDir% >>%cmd%
 rem 如果dir2目录不存在，则可以直接使用cp -r dir1 dir2
