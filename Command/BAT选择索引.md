@@ -2,9 +2,12 @@
 @echo off
 ::Set the window's encoding format to UTF-8
 CHCP 65001 >nul
-:start
+goto start_2
+:start_1
+call :blank
+:start_2
 call :tips
-choice /C ABCDEFGHIJKL /N /M "Please select:"
+choice /C ABCDEFGHIJKL10 /N /M "Please select:"
 if %errorlevel% == 1 call %CD%\outputApp.bat
 if %errorlevel% == 2 call %CD%\outputDB.bat
 if %errorlevel% == 3 call %CD%\uninstallCurrentApp.bat
@@ -17,35 +20,9 @@ if %errorlevel% == 9 call %CD%\360jg_channel.bat
 if %errorlevel% == 10 call %CD%\Screenshot_ScreenRecording.bat
 if %errorlevel% == 11 call %CD%\startFastApp.bat
 if %errorlevel% == 12 call %CD%\portOccupationQuery.bat
-rem set /p opt="Please select an operation:"
-::if "%opt%" == "A" (
-::	call %CD%\outputApp.bat
-::) else if "%opt%" == "B" (
-::	call %CD%\outputDB.bat
-::) else if "%opt%" == "C" (
-::	call %CD%\uninstallCurrentApp.bat
-::) else if "%opt%" == "D" (
-::	call %CD%\pushFileIntoSDCard.bat
-::) else if "%opt%" == "E" (
-::	call %CD%\getInfoFromApk.bat
-::) else if "%opt%" == "F" (
-::	call %CD%\isServiceRuning.bat
-::) else if "%opt%" == "G" (
-::	call %CD%\MD5_SHA1_SHA256.bat
-::) else if "%opt%" == "H" (
-::	call %CD%\startEmulator.bat
-::) else if "%opt%" == "I" (
-::	call %CD%\360jg_channel.bat
-::) else if "%opt%" == "J" (
-::	call %CD%\Screenshot_ScreenRecording.bat
-::) else if "%opt%" == "K" (
-::	call %CD%\startFastApp.bat
-::) else if "%opt%" == "L" (
-::	call %CD%\portOccupationQuery.bat
-::) else (
-::	goto start
-::)
-goto exit
+if %errorlevel% == 13 call %CD%\viewBatchFile.bat
+if %errorlevel% == 14 goto :exit
+goto start_1
 
 rem operation menu
 :tips
@@ -63,12 +40,13 @@ echo I. AndGuard_360JG_walle
 echo J. Screenshot or ScreenRecording
 echo K. start FastApp on loader
 echo L. ADB Port Occupation Query
+echo 1. View Batch File
+echo 0. Exit
 echo\
 goto :eof
 
 rem exit
-:exit
-set /p exit="Enter q to exit,otherwise continue!"
+:blank
 ::Multiple ways to output blank lines
 echo=
 echo,
@@ -80,14 +58,8 @@ echo]
 echo:
 echo.
 echo\
-if "%exit%" equ "q" (
-	goto end
-) else (
-	goto start
-)
 goto :eof
 
-
-:end
+:exit
 ```
 
